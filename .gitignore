@@ -1,4 +1,8 @@
 *.iso
 *.box
+*.retry
+build.pwd
+build.hwm
+build.pwi
 output/
 
