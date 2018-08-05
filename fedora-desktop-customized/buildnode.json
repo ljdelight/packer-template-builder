@@ -3,16 +3,16 @@
     "pwd": "{{ env `PWD` }}",
     "compression_level": "9",
     "headless": "false",
-    "description": "Fedora 25 desktop customized image",
+    "description": "Fedora desktop customized image",
     "version": "0.0.1"
   },
 
   "builders": [
     {
       "type": "virtualbox-ovf",
-      "source_path": "file://{{user `pwd`}}/fedora-25-desktop-base/output/fedora-25-desktop-base-x86_64.ova",
+      "source_path": "file://{{user `pwd`}}/fedora-desktop-base/output/fedora-desktop-base-x86_64.ova",
       "output_directory": "output",
-      "vm_name": "fedora-25-desktop-customized-x86_64",
+      "vm_name": "fedora-desktop-customized-x86_64",
       "headless": "{{user `headless`}}",
       "boot_wait": "5s",
       "ssh_username": "builduser",
