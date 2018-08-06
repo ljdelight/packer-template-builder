@@ -3,13 +3,17 @@ This project uses Hashicorp Packer to automate the (silent) installation of Fedo
 
 ## Prerequisites
 
-### Install Virutal Box
+### Install VirutalBox
 
 This project builds Oracle VirtualBox images and it needs to be installed. [See their installation instructions](https://www.virtualbox.org/wiki/Downloads).
 
 ### Install packer
 
 The makefiles assume `packer.io` is on the path, and the name is slightly different vs the [packer installation instructions](https://www.packer.io/intro/getting-started/install.html#precompiled-binaries) since Fedora has a `packer` binary ([cracklib-dicts](https://github.com/cracklib/cracklib), required by anaconda-core).
+
+### Install Ansible
+
+[Install ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html). Fedora systems can do `sudo dnf install ansible`.
 
 ### Download Fedora Server
 
