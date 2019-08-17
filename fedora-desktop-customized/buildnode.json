@@ -2,7 +2,7 @@
   "variables": {
     "pwd": "{{ env `PWD` }}",
     "compression_level": "9",
-    "headless": "false",
+    "headless": "true",
     "description": "Fedora desktop customized image",
     "version": "0.0.1"
   },
