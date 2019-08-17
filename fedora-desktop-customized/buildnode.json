@@ -10,7 +10,7 @@
   "builders": [
     {
       "type": "virtualbox-ovf",
-      "source_path": "file://{{user `pwd`}}/fedora-desktop-base/output/fedora-desktop-base-x86_64.ova",
+      "source_path": "../fedora-desktop-base/output/fedora-desktop-base-x86_64.ova",
       "output_directory": "output",
       "vm_name": "fedora-desktop-customized-x86_64",
       "headless": "{{user `headless`}}",
