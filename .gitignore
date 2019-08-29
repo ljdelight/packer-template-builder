@@ -5,4 +5,4 @@ build.pwd
 build.hwm
 build.pwi
 output/
-
+packer_cache/
