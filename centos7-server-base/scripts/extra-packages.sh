@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo dnf update -y
+sudo yum -y update
 
-sudo dnf install -y \
+sudo yum -y install \
   python \
   python-dnf

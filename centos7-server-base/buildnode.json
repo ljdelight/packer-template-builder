@@ -4,30 +4,28 @@
     "cpus": "2",
     "memory": "2048",
     "disk_size": "40000",
-    "headless": "true",
+    "headless": "false",
     "ssh_timeout": "30m",
-    "description": "Fedora server image",
+    "description": "CentOS7 server image",
     "version": "0.0.1"
   },
 
   "builders": [
     {
       "type": "virtualbox-iso",
-      "guest_os_type": "Fedora_64",
-      "iso_url": "file:///opt/fedora-images/Fedora-Server-dvd-x86_64-28-1.1.iso",
-      "iso_checksum": "8d59a25052e05758c15fe9daa3bc472b5619791b442e752450bba7f1eeca9c1a",
+      "guest_os_type": "RedHat_64",
+      "iso_url": "file:///home/ljdelight/Downloads/CentOS-7-x86_64-Minimal-1810.iso",
+      "iso_checksum": "38d5d51d9d100fd73df031ffd6bd8b1297ce24660dc8c13a3b8b4534a4bd291c",
       "iso_checksum_type": "sha256",
       "output_directory": "output",
-      "vm_name": "fedora-server-base-x86_64",
+      "vm_name": "centos7-server-base-x86_64",
       "disk_size": "{{user `disk_size`}}",
       "headless": "{{user `headless`}}",
       "http_directory": "http",
       "boot_wait": "5s",
       "boot_command": [
         "<tab> ",
-        "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/fedora-buildnode-ks.cfg ",
-        "biosdevname=0 ",
-        "net.ifnames=0 ",
+        "inst.ks=http://{{.HTTPIP}}:{{.HTTPPort}}/centos7-buildnode-ks.cfg ",
         "<enter>"
       ],
       "ssh_timeout": "{{user `ssh_timeout`}}",
@@ -53,9 +51,7 @@
     "type": "shell",
     "scripts": [
       "scripts/sshd.sh",
-      "scripts/extra-packages.sh",
-      "../common/scripts/cleanup.sh",
-      "../common/scripts/minimize.sh"
+      "scripts/extra-packages.sh"
     ]
   }]
 }
